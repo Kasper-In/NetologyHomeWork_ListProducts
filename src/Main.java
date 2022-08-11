@@ -41,8 +41,12 @@ public class Main {
                     case 1:
                         System.out.println("Введите названия продукта, который хотите добавить: ");
                         String newProduct = sc.nextLine();
-                        listProducts.add(newProduct);
-                        System.out.println("Продукт добавлен с список. Итого продуктов в с списке: " + listProducts.size());
+                        if (listProducts.contains(newProduct)){
+                            System.out.println("Такой продукт уже есть в списке");
+                        } else {
+                            listProducts.add(newProduct);
+                            System.out.println("Продукт добавлен с список. Итого продуктов в с списке: " + listProducts.size());
+                        }
                         System.out.println();
                         break;
                     case 2:
